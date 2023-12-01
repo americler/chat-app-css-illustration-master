@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  --light-magenta: hsl(293, 100%, 63%);
+  --light-violete: hsl(264, 100%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --app-bg: hsl(270, 20%, 96%);
+  --submit-btn-bg: hsl(271, 36%, 24%);
+  --radio-btn-outline: hsl(289, 100%, 72%);
+  --sub-heading: hsl(276, 100%, 81%);
+  --left-chat: hsl(276, 55%, 52%);
+  --right-chat: hsl(271, 15%, 43%);
+  --placeholder: hsl(206, 6%, 79%);
+  --main-heading: hsl(271, 36%, 24%);
+  --paragraph: hsl(270, 7%, 64%);
+  --left-bubble: hsl(272, 40.54%, 92.75%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.pattern {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.pattern-up {
+  width: 30%;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  left: -5%;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    var(--light-violete) 0%,
+    var(--light-magenta) 100%
+  );
+  border-bottom-left-radius: 500px;
+  border-bottom-right-radius: 500px;
+}
+
+.pattern-down {
+  width: 15%;
+  height: 600px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    var(--light-violete) 0%,
+    var(--light-magenta) 100%
+  );
+  border-bottom-right-radius: 500px;
+  rotate: 180deg;
+  opacity: 0.03;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.phone-area {
+  flex: 1;
+}
+
+.text-area {
+  flex: 1;
+}
+
+.phone {
+  max-width: 275px;
+  background-color: var(--app-bg);
+  border: 20px solid var(--white);
+  border-radius: 40px;
+  filter: drop-shadow(0px 0px 20px rgba(58, 58, 58, 0.3));
+  position: relative;
+  margin: auto;
+}
+
+.phone-top {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(
+    45deg,
+    var(--light-violete) 0%,
+    var(--light-magenta) 100%
+  );
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.phone-top-white-bar {
+  width: 60%;
+  height: 16px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: var(--white);
+  position: absolute;
+  top: 0;
+}
+
+.top-bar-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--white);
+}
+
+.top-bar-content .content-left {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.top-bar-content .content-left img {
+  height: 24px;
+  width: auto;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.top-bar-content .content-left .user-info h1 {
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--white);
+}
+
+.top-bar-content .content-left .user-info p {
+  font-size: 8px;
+  color: var(--white);
+}
+
+.text-area h2 {
+  color: var(--main-heading);
+  font-size: 36px;
+  line-height: 48px;
+  margin-bottom: 20px;
+}
+
+.text-area p {
+  color: var(--paragraph);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.message-area {
+  font-size: 10px;
+  padding: 10px;
+}
+
+.message-area .message-recieved {
+  color: var(--left-chat);
+}
+
+.message-area p {
+  width: 60%;
+  padding: 10px;
+  clear: both;
+}
+
+.message-area .bg-left-bubble {
+  background-color: var(--left-bubble);
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.message-area .message-sent {
+  color: var(--right-chat);
+  float: right;
+}
+
+.message-area .bg-right-bubble {
+  background-color: var(--white);
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.message-area .message-sent img {
+  width: 48px;
+  float: left;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.message-area p.checkbox {
+  width: 75%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background: linear-gradient(
+    45deg,
+    var(--light-violete) 0%,
+    var(--light-magenta) 100%
+  );
+  border-radius: 10px 10px 10px 4px;
+  color: var(--left-bubble);
+  margin-bottom: 5px;
+}
+
+.message-area p.checkbox span {
+  position: absolute;
+  right: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.message-area p.checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  outline: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.message-area input[type="checkbox"]:checked {
+  background-color: #555;
+}
+
+.message-area .input .type-message {
+  width: calc(100% - 60px);
+  padding: 10px 30px;
+  margin: 10px 0;
+  border-radius: 50px;
+  border: none;
+  line-height: 30px;
+}
+
+.message-area .type-message::placeholder {
+  color: var(--placeholder);
+}
+
+.message-area .input {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.message-area .input span {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: black;
+  color: var(--white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .pattern-up {
+    width: 60%;
+  }
+
+  .pattern-down {
+    width: 50%;
+  }
+
+  .phone {
+    width: 250px;
+    margin-top: 50px;
+  }
+  .text-area {
+    padding: 50px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 376px) {
+  .content {
+    height: 100vh;
+    display: flex;
+  }
+}

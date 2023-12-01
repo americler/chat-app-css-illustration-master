@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Chat App</title>
+  </head>
+
+  <body>
+    <div class="pattern">
+      <div class="pattern-up"></div>
+      <div class="pattern-down"></div>
+    </div>
+    <div class="content">
+      <div class="phone-area">
+        <div class="phone">
+          <div class="phone-top">
+            <div class="phone-top-white-bar"></div>
+            <div class="top-bar-content">
+              <div class="content-left">
+                <span><i class="fa-solid fa-angle-left"></i></span>
+                <img src="./images/avatar.jpg" alt="" />
+                <div class="user-info">
+                  <h1>Samuel Green</h1>
+                  <p>Available to Walk</p>
+                </div>
+              </div>
+              <div class="content-right">
+                <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+              </div>
+            </div>
+          </div>
+          <div class="message-area">
+            <p class="message-recieved bg-left-bubble">
+              That sounds great. I'd be happy with that.
+            </p>
+            <p class="message-recieved bg-left-bubble">
+              Could you sand aver some pictures of your dog, please?
+            </p>
+            <div class="message-sent">
+              <img src="./images/dog-image-1.jpg" alt="dog-1" />
+              <img src="./images/dog-image-2.jpg" alt="dog-2" />
+              <img src="./images/dog-image-3.jpg" alt="dog-3" />
+            </div>
+            <p class="message-sent bg-right-bubble">
+              Here are a few pictures. She's a happy quil.
+            </p>
+            <p class="message-sent bg-right-bubble">Can you make it?</p>
+            <p class="message-recieved bg-left-bubble">
+              She looks so happy! The time we discussed works. How long shall I
+              take her out for?
+            </p>
+            <p class="checkbox">
+              <input type="checkbox" name="agree" id="agreeCheckbox" />
+              30 minutes walk
+              <span>$29</span>
+            </p>
+            <p class="checkbox">
+              <input type="checkbox" name="agree" id="agreeCheckbox" />
+              1 hour walk
+              <span>$49</span>
+            </p>
+            <div class="input">
+              <input
+                type="text"
+                class="type-message"
+                name="message"
+                id="message"
+                placeholder="Type a message..."
+              />
+              <span><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-area">
+        <h2>Simple booking</h2>
+        <p>
+          Stay in touch with our dog walkers through the chat interface. This
+          makes it easy to discuss arrangements and make bookings. Once the wak
+          has been completed you can rate your walker and book again all through
+          the chat.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
